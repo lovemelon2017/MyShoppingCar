@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".CarActivity">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#dedede" />
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@mipmap/ic_go_back_black" />
+
+    <TextView
+        android:id="@+id/title_car_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="购物车"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/title_car_bianji"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--空车-->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="#90dedede"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:text="购物车空空如也\n快去添加吧"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/car_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" />
+
+        <!--底部状态栏-->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/car_have_cl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/no_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="已选(1)"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_check"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/to_buy_tv"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#99ff0000"
+                android:gravity="center"
+                android:text="立即下单"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/buy_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="¥ 0"
+                android:textColor="#ff0000"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/to_buy_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

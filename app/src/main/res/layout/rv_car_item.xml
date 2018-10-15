@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/car_check_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/yes_checked"
+        app:layout_constraintBottom_toBottomOf="@+id/car_item_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/car_item_iv" />
+
+
+    <ImageView
+        android:id="@+id/car_item_iv"
+        android:layout_width="130dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_product_1"
+        app:layout_constraintLeft_toRightOf="@id/car_check_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/car_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="英雄联盟"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/car_item_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/car_title_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="--最爱你最美"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/car_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/car_title_tv" />
+
+    <TextView
+        android:id="@+id/car_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="¥ 100"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/car_item_iv"
+        app:layout_constraintLeft_toLeftOf="@+id/car_title_tv" />
+
+    <LinearLayout
+        android:layout_width="93dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/price_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/car_price_tv"
+        app:layout_constraintLeft_toRightOf="@+id/car_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/car_price_tv">
+
+        <TextView
+            android:id="@+id/car_item_jian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="－"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333333" />
+
+        <TextView
+            android:id="@+id/car_item_num"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333333" />
+
+        <TextView
+            android:id="@+id/car_item_jia"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="＋"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#dedede"
+        app:layout_constraintTop_toBottomOf="@+id/car_item_iv" />
+
+</android.support.constraint.ConstraintLayout>
