@@ -154,6 +154,7 @@ public class CarActivity extends AppCompatActivity {
                 }
                 Toast.makeText(CarActivity.this, "成功移除购物车", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
+                setDeletedCheck();
                 if (listDelete.size() == 0) {
                     vHaveProduct.setVisibility(View.GONE);
                     tvBianji.setVisibility(View.GONE);
