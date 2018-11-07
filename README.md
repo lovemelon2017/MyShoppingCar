@@ -5,4 +5,4 @@
 ![image](https://github.com/lovemelon2017/MyShoppingCar/blob/master/car.gif)
 
 项目中使用了GreenDao,ButterKnife,recylerView,在这里，推荐大家使用下BaseRecyclerViewAdapterHelper,这个库是recylerView的万能适配器，
-有下拉上拉，有多布局，有点击，有加载动画。。。百度详情
+有下拉上拉，有多布局，有点击，有加载动画。。。百度详情。
